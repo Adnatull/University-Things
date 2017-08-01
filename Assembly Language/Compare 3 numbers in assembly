@@ -1,0 +1,96 @@
+name "add-sub"
+
+org 100h
+
+.data
+
+num1 db ?
+num2 db ?
+num3 db ?
+msg1 db "Enter the first number: $"
+msg2 db "Enter the second number: $"
+msg3 db "Enter the third number: $"
+smaller db ,"Smaller number is: $"
+middle db "Middle number is: $"
+bigger db "Bigger number is: $"
+
+.code
+mov ax,@data
+mov ds,ax
+
+lea dx,msg1
+mov ah,9
+int 21h
+
+mov ah,1
+int 21h
+sub al,30h
+mov num1,al 
+
+mov dl,0Ah
+mov ah,2
+int 21h
+
+mov dl,0Dh
+mov ah,2
+int 21h
+
+lea dx,msg2
+mov ah,9
+int 21h
+
+mov ah,1
+int 21h
+sub al,30h
+mov num2,al  
+
+mov dl,0Ah
+mov ah,2
+int 21h
+
+mov dl,0Dh
+mov ah,2
+int 21h
+
+lea dx,msg3
+mov ah,9
+int 21h
+
+mov ah,1
+int 21h
+sub al,30h
+mov num3,al  
+
+mov dl,0Ah
+mov ah,2
+int 21h
+
+mov dl,0Dh
+mov ah,2
+int 21h
+
+lea dx,smaller
+mov ah,9
+int 21h    
+
+mov al, num1
+mov bl, num2
+mov cl, num3    
+
+cmp al,bl
+
+jl kahini1
+
+
+kahini1:
+
+    add al,30h
+    mov dl,al
+    mov ah,2
+    int 21h   
+
+    
+
+endif:
+
+ret
