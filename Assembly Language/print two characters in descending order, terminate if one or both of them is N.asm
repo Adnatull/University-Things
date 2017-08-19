@@ -43,11 +43,11 @@ mov bl, char2
 
 cmp al,"N"
 
-je jmp finished
+je finished
 
 cmp bl, "N"
 
-je jmp finished 
+je finished 
 
 lea dx,msg1
 mov ah,9
