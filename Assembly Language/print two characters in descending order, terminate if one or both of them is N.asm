@@ -1,3 +1,9 @@
+; Problem statement: Take two random charackters/digits as input from user. Display them in descending order. Loop this process until 
+; the user types "N"; terminate the program if it is a "N" and display a message. (Hint: use two variables to store the input and
+; compare each of them with "N" at first; if they are not "N" then sort them according to their ascii values.);
+
+
+
 name "Print-two-characters-in-descending-order,-terminate-if-one-or-both-of-them-is-N"
 
 org 100h 
