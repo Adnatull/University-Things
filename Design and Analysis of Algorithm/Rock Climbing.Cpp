@@ -1,3 +1,10 @@
+/*
+    Problem Description: You are given cost of passing each rock. You are at ground & your job is to go to peak by climibing those rocks. 
+    write a program to calculate minimum cost to go up from bottom. Note: first row is ground & last row in top most.
+    
+    */
+
+
 #include <stdio.h>
 
 /*
