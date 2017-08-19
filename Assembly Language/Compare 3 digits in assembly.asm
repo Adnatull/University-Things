@@ -1,3 +1,14 @@
+; Problem Statement: Take 3 digits as input. compare them and print in descendint order like following:
+; Sample input: 
+;        Enter the first number: 1
+;        Enter the second number: 2
+;        Enter the third number: 3
+;
+; Sample output:
+;        Smaller number is: 1
+;        Middle number is: 2
+;        Bigger number is: 3
+
 name "add-sub"
 
 org 100h
