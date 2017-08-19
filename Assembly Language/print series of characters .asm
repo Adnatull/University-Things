@@ -1,3 +1,22 @@
+; Problem Description: You are given a character. The character will be a or A or 0. Your job is to identify the character &
+; if the character is 0 then print up to 9 from 0, else if the character is a then print up to z from a, else print up to Z from A.
+
+; Sample Input:
+; 0
+;
+;Sample output:
+; 0
+; 1
+; 2
+; 3
+; 4
+; 5
+; 6
+; 7
+; 8
+; 9 
+
+
 name "print-character"
 
 org 100h
