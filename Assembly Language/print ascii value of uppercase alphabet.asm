@@ -1,3 +1,9 @@
+; Problem Statement: Write a program to print the ascii values of the hex digits. 
+; if the users type othe letters than A-F or lowercase letters, then print a message & break other wise loop this process.
+; (Hint: Use variable to store the input and compare them with the range A-F by using ascii value, use necessary jump commands for this);
+
+
+
 name "Print-ascii-value-of-uppercase-alphabet"
 
 org 100h
