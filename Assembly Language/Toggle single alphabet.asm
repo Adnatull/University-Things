@@ -1,6 +1,6 @@
 ; Problem Statement: Take a letter as a random input (it could be uppercase or lowercase) from user. Whatever the input is, toggle
 ; the case; means, if it is an uppercase letter than convert it to lower case letter, or if it is a lowercase letter than convert it into
-; uppercase. Check output and print a message if it is a hexadecimal digit int the range A-F. (Hint: Compare the user input with 'Z' and
+; uppercase. Check output and print a message if it is a hexadecimal digit in the range A-F. (Hint: Compare the user input with 'Z' and
 ; toggle it by adding or subtracting necessary values; then compare it with range of A-F and print a message as shown below)
 ;
 ; Sample input: x
