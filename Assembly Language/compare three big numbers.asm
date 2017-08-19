@@ -1,3 +1,18 @@
+; Problem Statement: Put three numbers 111,222,333 in the three registers AX, BX, CX respectively. Write a program to excute 
+; the following:
+;               if (AX>CX)
+;                    then if (CX>BX)
+;                           print "AX contains LARGEST value"
+;                    else 
+;                           print "CX contains SMALLEST value"
+;               else 
+;                    then if (CX>BX)
+;                           print "CX contains LARGEST value"    
+;                    else
+;                           print "AX contains the SMALLEST value"
+
+
+
 name "Compare-three-numbers" 
 
 org 100h 
