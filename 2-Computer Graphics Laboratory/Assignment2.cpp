@@ -207,6 +207,7 @@ public:
     void startPop() {
         while(cnt != 0) {
             pile.pop();
+            cnt--;
         }
     }
 
