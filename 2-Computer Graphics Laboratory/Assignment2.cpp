@@ -194,6 +194,7 @@ public:
         cout << xx.cx << " ";
         cout << xx.cy << " ";
         cout << xx.cz << endl;
+        cout << endl << endl;
     }
 
     void togglePush() {
@@ -205,7 +206,7 @@ public:
         }
     }
     void startPop() {
-        while(cnt != 0) {
+        while(cnt > 0) {
             pile.pop();
             cnt--;
         }
@@ -216,7 +217,7 @@ public:
 
 int main() {
 
-    freopen ("in.txt", "r", stdin);
+    freopen ("scene.txt", "r", stdin);
 
     transformation assignment;
 
@@ -239,7 +240,6 @@ int main() {
             assignment.rotation(x, y, z, zz);
         } else if (s == "triangle") {
             assignment.triangle();
-
         } else if (s == "push") {
             assignment.togglePush();
         } else if (s == "pop") {
@@ -248,7 +248,5 @@ int main() {
             break;
         }
     }
-
-
 
 }
