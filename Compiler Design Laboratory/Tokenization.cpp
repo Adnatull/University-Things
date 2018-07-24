@@ -13,8 +13,7 @@ struct token {
 
 class linkedList {
 
-public:
-
+private:
     token *head = NULL;
 
     token *newToken(string tokenname, string value) {
@@ -63,7 +62,6 @@ public:
     }
 
     void display() {
-        cout << "Aschi ami ekhane" << endl;
         token *temp = head;
 
         while(temp!=NULL) {
@@ -71,7 +69,32 @@ public:
             temp = temp->next;
         }
 
+
     }
+
+    public:
+
+        token* addTOKEN(string a, string b) {
+            token *temp = head;
+            return addToken(temp, a, b);
+        }
+
+        void searchTOKEN (string tokenname, string value) {
+            token *temp = head;
+            return searchToken (temp,tokenname, value);
+        }
+
+        token* deleteTOKEN( string tokenname, string value) {
+            token *temp = head;
+            return deleteToken(temp, tokenname, value);
+        }
+
+        void DISPLAY() {
+            display();
+        }
+
+
+
 };
 
 int main() {
@@ -88,12 +111,12 @@ int main() {
         //cout << p << endl;
         ss >> q;
         //cout << q << endl;
-
-        if (p=="DT") Table[0].addToken(Table[0].head, p, q);
-        else if (p == "VAR") Table[1].addToken(Table[1].head, p, q);
-        else if (p == "NUM") Table[2].addToken(Table[2].head, p, q);
+        cout << p << " " << q << endl;
+        if (p=="DT") Table[0].addTOKEN( p, q);
+        else if (p == "VAR") Table[1].addTOKEN (p, q);
+        else if (p == "NUM") Table[2].addTOKEN( p, q);
        // cout << "HELLO" << endl;
     }
-   // Table[0].display();
+    Table[2].DISPLAY();
 
 }
