@@ -14,10 +14,10 @@ struct token {
 class linkedList {
 
 private:
-    token *head = NULL;
+    token *head;
 
     token *newToken(string tokenname, string value) {
-        token *temp = (token*) malloc(sizeof(token));
+        token* temp = (struct token*) malloc(sizeof(token));
         temp->tokenname = tokenname;
         temp->value = value;
         temp->next = NULL;
@@ -62,21 +62,27 @@ private:
     }
 
     void display() {
-        token *temp = head;
+        token* temp = head;
 
         while(temp!=NULL) {
-            cout <<  temp->tokenname << "," << temp->value << " => ";
+            cout <<  temp->tokenname << "," << temp->value ;
+            if (temp->next != NULL) {
+                cout << " => ";
+            }
             temp = temp->next;
         }
-
-
+        cout << endl << endl;
     }
 
     public:
 
-        token* addTOKEN(string a, string b) {
+        linkedList() {
+            head = NULL;
+        }
+
+        void addTOKEN(string a, string b) {
             token *temp = head;
-            return addToken(temp, a, b);
+            head = addToken(temp, a, b);
         }
 
         void searchTOKEN (string tokenname, string value) {
@@ -100,7 +106,7 @@ private:
 int main() {
     freopen ("input.txt", "r", stdin);
     string s;
-    linkedList Table[3];
+    linkedList Table[5];
     while (getline(cin, s)) {
         for (int i=0; i<s.size(); i++) {
             if (s[i]==',') s[i] = 32;
@@ -111,12 +117,14 @@ int main() {
         //cout << p << endl;
         ss >> q;
         //cout << q << endl;
-        cout << p << " " << q << endl;
+       // cout << p << " " << q << endl;
         if (p=="DT") Table[0].addTOKEN( p, q);
         else if (p == "VAR") Table[1].addTOKEN (p, q);
         else if (p == "NUM") Table[2].addTOKEN( p, q);
        // cout << "HELLO" << endl;
     }
+    Table[0].DISPLAY();
+    Table[1].DISPLAY();
     Table[2].DISPLAY();
-
+    return 0;
 }
