@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
@@ -75,6 +74,9 @@ private:
         }
         if(cnt)
             cout << endl;
+        else {
+            cout << "This list is empty" << endl;
+        }
     }
 
     public:
@@ -108,7 +110,7 @@ private:
 
 int main() {
 
-    cout << "Insert 5 to input token 6 to delete, 7 to search, 8 to print and 9 to exit" << endl;
+    cout << "Insert 5 to input token 6 to delete, 7 to search, 8 to print to whole token list and any other key to exit" << endl;
     linkedList Table[5];
     string p, q;
     int n;
@@ -139,7 +141,7 @@ int main() {
         } else {
             break;
         }
-
+        cout << "Insert 5 to input token 6 to delete, 7 to search, 8 to print to whole token list and any other key to exit" << endl;
     }
 
 
