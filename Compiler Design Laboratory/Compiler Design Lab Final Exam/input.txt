@@ -1,0 +1,29 @@
+DT float 1
+VAR k 1
+OP = 1
+NUM 50.5 1
+NOT ; 1
+
+KWRD if 2
+NOT ( 2
+VAR j 2
+RELOP == 2
+NUM 5 2
+NOT ) 2
+VAR j 2
+OP = 2
+NUM 5 2
+NOT ; 2
+
+VAR j 3
+OP ++ 3
+NOT ; 3
+
+KWRD while 4
+NOT { 4
+
+VAR i 4
+OP ++ 4
+NOT ; 4
+
+NOT } 5
